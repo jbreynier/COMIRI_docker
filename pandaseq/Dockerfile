@@ -6,4 +6,6 @@ RUN apt-get update && \
     export GIT_SSL_NO_VERIFY=1 && \
     git clone https://github.com/neufeld/pandaseq.git && \
     cd /pandaseq && \
-    ./autogen.sh && ./configure && make && make install && ldconfig
+    ./autogen.sh && ./configure && make && make install
+    
+RUN ldconfig
