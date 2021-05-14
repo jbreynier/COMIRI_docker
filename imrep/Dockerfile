@@ -5,7 +5,7 @@ RUN export GIT_SSL_NO_VERIFY=1 && \
     cd /imrep && \
     pip install pysam && \
     pip install biopython==1.76 && \
-    pip install intervaltree && \
+    pip install intervaltree==2.1.0 && \
     pip install jellyfish && \
     pip install numpy && \
     pip install networkx && \
