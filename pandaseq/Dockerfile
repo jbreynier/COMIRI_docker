@@ -1,8 +1,10 @@
 FROM ubuntu:16.04
 
+# Add pthreads to run in parallel
+
 RUN apt-get update && \
     apt-get install -y build-essential libtool \
-    automake zlib1g-dev libbz2-dev pkg-config git man && \
+    automake zlib1g-dev libbz2-dev pkg-config git man libpthread-stubs0-dev && \
     export GIT_SSL_NO_VERIFY=1 && \
     git clone https://github.com/neufeld/pandaseq.git && \
     cd /pandaseq && \
